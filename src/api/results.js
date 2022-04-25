@@ -15,9 +15,10 @@ const router = express.Router();
 // READ ALL
 router.get('/', async (req, res, next) => {
   try {
-    let { preset, offset = 0, limit = 90 } = req.query;
+    let { offset = 0, limit = 90 } = req.query;
+    const { preset } = req.query;
     const presets = ['calendar-month', 'month', '3-weeks', 'week', 'day'];
-    if (presets.includes(preset)) {
+    if (preset && presets.includes(preset)) {
       switch (preset) {
         case 'calendar-month':
           offset = 0;
