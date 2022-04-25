@@ -3,7 +3,7 @@
 
 A simple REST API that exposes the data created by the [speedtest-cronjob service](https://github.com/dewhurstwill/speedtest-cronjob)
 
-## Prequesties
+## Prerequisites
 ---
 
 ### Node modules:
